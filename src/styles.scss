@@ -1,0 +1,138 @@
+// styles.scss
+
+// Light mode colors
+$background-color-light: #ffffff;
+$text-color-light: #333333;
+
+// Dark mode colors
+$background-color-dark: #333333;
+$text-color-dark: #ffffff;
+
+// styles.scss
+
+// Light mode styles
+.light-mode {
+  background-color: $background-color-light;
+  color: $text-color-light;
+  .top-bar {
+    background-color: $background-color-light;
+  }
+  .navbar {
+    background-color: $background-color-light;
+  }
+  .search {
+    background-color: $background-color-light;
+    border-bottom: 1px solid $text-color-light;
+  }
+}
+
+// Dark mode styles
+.dark-mode {
+  background-color: $background-color-dark;
+  color: $text-color-dark;
+  .top-bar {
+    background-color: $background-color-dark;
+  }
+  .navbar {
+    background-color: $background-color-dark;
+  }
+  .search {
+    background-color: $background-color-dark;
+    border-bottom: 1px solid $text-color-dark;
+  }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    button {
+        padding: 10px;
+        background-color: bisque;
+        border: 1px solid #614a00;
+        border-radius: 7px;
+    }
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 69.77px;
+    left: 0px;
+    gap: 40px;
+    padding: 16px 20px;
+    width: 100%;
+    a {
+        text-decoration: none;
+        color: #101010;
+        padding: 10px;
+        background-color: aquamarine;
+        border-radius: 7px;
+    }
+}
+
+.search {
+    position: fixed;
+    top: 120.66px;
+    left: 0;
+    padding: 16px 20px;
+    width: 100%;
+    input {
+        height: 30px;
+    }
+    button {
+        padding: 6px;
+    }
+}
+
+.content {
+    margin-top: 183.54px;
+    padding: 16px 20px;
+}
+
+.grid-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    @media (min-width:600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (min-width: 1070px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media (min-width: 1320px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    @media (min-width:1600px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+
