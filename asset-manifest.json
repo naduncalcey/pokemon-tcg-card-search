@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pokemon-tcg-card-search/static/css/main.41ffb797.css",
+    "main.js": "/pokemon-tcg-card-search/static/js/main.60090e9d.js",
+    "index.html": "/pokemon-tcg-card-search/index.html",
+    "main.41ffb797.css.map": "/pokemon-tcg-card-search/static/css/main.41ffb797.css.map",
+    "main.60090e9d.js.map": "/pokemon-tcg-card-search/static/js/main.60090e9d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41ffb797.css",
+    "static/js/main.60090e9d.js"
+  ]
+}
