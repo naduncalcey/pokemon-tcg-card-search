@@ -81,7 +81,7 @@ const App = () => {
         <div className="fixed bg-[#ede7e1] h-55 w-full mb-2">
           <div className=' top-0 left-0 w-full flex justify-between items-center  py-[16px] px-[20px]'>
             <div >
-              <h1 className='font-semibold text-3xl'>Pokémon TCG</h1>
+              <h1 className='font-semibold text-3xl'>Pokémon TCG Search</h1>
             </div>
             <div className='top-bar-child-align-center'>
               <button className='p-[10px] bg-[bisque] border-1 rounded-lg border-[#614a00]' onClick={toggleMode}>{mode === "dark" ? "Dark" : "Light"}</button>
