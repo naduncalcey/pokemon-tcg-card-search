@@ -5,7 +5,7 @@ import CardList from "./components/CardList";
 import FavoriteList from "./components/FavoriteList";
 import CardDetail from "./components/CardDetails";
 
-import "./styles.css"; // Import the styles.css file
+// import "./styles.css"; // Import the styles.css file
 
 const App = () => {
   const [cards, setCards] = useState([]);
@@ -77,27 +77,30 @@ const App = () => {
 
   return (
     <Router>
-      <div className={mode === "dark" ? "dark-mode container" : "light-mode container"}>
-        <div className='top-bar'>
-          <div className='top-bar-child-align-center'>
-            <h1>Pokémon TCG</h1>
+      <div className="relative h-full w-full overflow-y-auto">
+        <div className="fixed bg-[#ede7e1] h-55 w-full mb-2">
+          <div className=' top-0 left-0 w-full flex justify-between items-center  py-[16px] px-[20px]'>
+            <div >
+              <h1 className='font-semibold text-3xl'>Pokémon TCG</h1>
+            </div>
+            <div className='top-bar-child-align-center'>
+              <button className='p-[10px] bg-[bisque] border-1 rounded-lg border-[#614a00]' onClick={toggleMode}>{mode === "dark" ? "Dark" : "Light"}</button>
+            </div>
           </div>
-          <div className='top-bar-child-align-center'>
-            <button className='mode-btn' onClick={toggleMode}>{mode === "dark" ? "Dark" : "Light"}</button>
+          <nav className='flex top-[69.77px] left-0 gap-[40px] py-[16px] px-[20px] '>
+            <div>
+              <Link to="/" className="text-[#101010] p-[10px] bg-[aquamarine] rounded-[7px]">Search</Link>
+            </div>
+            <div>
+              <Link to="/favorites" className="text-[#101010] p-[10px] bg-[aquamarine] rounded-[7px]">Favorites</Link>
+            </div>
+          </nav>
+          <div className='top-[120.66px] left-0 py-[16px] px-[20px] '>
+            <CardSearch setCards={setCards} isFetching={isFetching} />
           </div>
+
         </div>
-        <nav className='navbar'>
-          <div>
-            <Link to="/">Search</Link>
-          </div>
-          <div>
-            <Link to="/favorites">Favorites</Link>
-          </div>
-        </nav>
-        <div className='search'>
-          <CardSearch setCards={setCards} isFetching={isFetching} />
-        </div>
-        <div className='content'>
+        <div className='py-[16px] px-[20px] mt-56'>
           <Routes>
             <Route
               path="/"

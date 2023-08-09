@@ -19,16 +19,17 @@ const FavoriteList = ({ favorites, removeFromFavorites, updateFavorites }) => {
   };
 
   return (
-    <div>
-      <h2>Favorite Cards</h2>
+    <div className="flex justify-center">
+      <h2 className="font-epilogue font-semibold text-[20px] my-4">Favorite Cards</h2>
       {favorites.length > 0 ? (
-        <div>
+        <div className='grid gap-x-4 gap-y-9 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
           {favorites.map((card) => (
-            <div key={card.id}>
+            <div key={card.id} className="mx-5 border-0  hover:bg-[#ebd8d85a]">
               <img src={card.imageUrl} alt={card.name} />
-              <p>{card.name}</p>
+              <p className="font-epilogue font-semibold text-[20px] m-2">{card.name}</p>
               <p>{card.type}</p>
-              <button onClick={() => handleRemoveFromFavorites(card.id)}>
+              <button onClick={() => handleRemoveFromFavorites(card.id)}
+                className="font-epilogue font-semibold text-[16px] leading-[26px]  min-h-[25px] w-[170px] p-[6px] rounded-[7px] bg-[#ebe7b7] m-2 text-center">
                 Remove from Favorites
               </button>
             </div>
